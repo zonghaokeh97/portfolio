@@ -4,18 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Zong Hao Keh</title>
-<meta name="description" content="Zong Hao Keh: MBA candidate at UC Berkeley Haas, former Lead Mechanical Engineer at PETRONAS Floating LNG. Projects and contact.">
+<meta name="description" content="Zong Hao Keh: MBA candidate at UC Berkeley Haas, former Lead Mechanical Engineer on PETRONAS's PFLNG Dua. Projects, writing and contact.">
 <meta property="og:title" content="Zong Hao Keh">
-<meta property="og:description" content="MBA candidate at UC Berkeley Haas. Energy, operations and the projects I build.">
+<meta property="og:description" content="MBA candidate at UC Berkeley Haas. Formerly Lead Mechanical Engineer on the world's first deepwater floating LNG facility.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://zonghaokeh.com/">
+<meta property="og:image" content="https://zonghaokeh.com/images/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Zong Hao Keh, MBA candidate at UC Berkeley Haas">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Libre+Franklin:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Libre+Franklin:wght@400;600;700&display=swap">
 <style>
-/* Layout: one narrow column, newspaper-style type to match Sector Brief. */
 :root{
-  --ground:#FFFFFF; --ink:#121212; --muted:#5A5A5A; --rule:#DFDFDF; --strong:#121212; --soft:#F7F7F5; --accent:#326891;
+  --ground:#FFF9F3; --ink:#121212; --muted:#5C5650; --rule:#E8DED4; --strong:#121212; --soft:#F7EEE5; --accent:#326891;
   --display:"Playfair Display", Georgia, "Times New Roman", serif;
   --body:Georgia, "Times New Roman", Times, serif;
   --sans:"Libre Franklin", "Helvetica Neue", Arial, sans-serif;
@@ -23,59 +28,147 @@
 @media (prefers-color-scheme: dark){:root{--ground:#121212; --ink:#E8E8E6; --muted:#A3A3A0; --rule:#333333; --strong:#E8E8E6; --soft:#1C1C1C; --accent:#8DB4D6; color-scheme:dark}}
 html{height:100%}
 body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6}
-.wrap{max-width:720px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));padding-block:calc(env(safe-area-inset-top,0px) + 56px) calc(env(safe-area-inset-bottom,0px) + 64px);display:flex;flex-direction:column;gap:40px}
+.wrap{max-width:960px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:calc(env(safe-area-inset-top,0px) + 28px) calc(env(safe-area-inset-bottom,0px) + 64px);display:flex;flex-direction:column;gap:32px}
 a{color:var(--accent)}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-header{display:flex;flex-direction:column;gap:12px;border-bottom:3px double var(--strong);padding-bottom:24px}
-h1{font-family:var(--display);font-weight:800;font-size:clamp(44px,9vw,72px);line-height:1;letter-spacing:-.015em;margin:0}
-.tagline{font-family:var(--sans);font-size:15px;color:var(--muted);margin:0}
-.links{display:flex;flex-wrap:wrap;gap:8px 20px;font-family:var(--sans);font-size:14px;font-weight:600}
-h2{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+
+/* Masthead */
+.mast{display:flex;flex-direction:column;border-bottom:3px double var(--strong)}
+.mast-name{display:flex;align-items:center;justify-content:center;gap:clamp(14px,3vw,28px);padding:4px 0 14px}
+.mast-name h1{padding:0}
+.mast-photo{width:clamp(64px,11vw,112px);height:auto;aspect-ratio:1;object-fit:cover;border-radius:50%;flex:none}
+.mast-bot{display:flex;justify-content:center;font-family:var(--sans);font-size:12.5px;padding:8px 0;border-top:1px solid var(--rule)}
+.mast h1{font-family:var(--display);font-weight:800;font-size:clamp(44px,9vw,84px);line-height:1;letter-spacing:-.015em;margin:0;text-align:center;padding:4px 0 14px}
+.links{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 24px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.links a{text-decoration:none;color:var(--ink)}
+.links a:hover{text-decoration:underline;text-underline-offset:3px}
+
+h2{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid var(--strong)}
 p{margin:0 0 14px}
-.project{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 20px;padding:18px 0;border-bottom:1px solid var(--rule);text-decoration:none;color:inherit}
-.project h3{font-family:var(--display);font-weight:700;font-size:28px;line-height:1.15;margin:0}
-.project p{grid-column:1 / -1;margin:0;color:var(--muted);font-size:17px}
-.project .go{font-family:var(--sans);font-size:14px;font-weight:700;color:var(--accent);align-self:center;white-space:nowrap}
+
+/* Lead: About */
+.lead{display:flex;flex-direction:column}
+.lead h2{margin-bottom:0}
+.lead .deck{font-family:var(--display);font-weight:600;font-style:italic;font-size:clamp(22px,3vw,28px);line-height:1.35;margin:0 0 16px}
+.lead > p{max-width:820px}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));font-family:var(--sans);font-size:15px;line-height:1.45;border-bottom:1px solid var(--rule);margin-bottom:24px}
+.facts div{padding:12px 20px}
+.facts div:first-child{padding-left:0}
+.facts div + div{border-left:1px solid var(--rule)}
+.facts b{display:block;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:2px}
+@media (max-width:720px){.facts{grid-template-columns:minmax(0,1fr)}.facts div{padding:10px 0}.facts div + div{border-left:0;border-top:1px solid var(--rule)}}
+
+/* Below the fold: Projects (main) + Thoughts (column) */
+.columns{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:0 36px}
+.columns > section + section{border-left:1px solid var(--rule);padding-left:36px}
+@media (max-width:720px){.columns{grid-template-columns:minmax(0,1fr);gap:32px}.columns > section + section{border-left:0;padding-left:0}}
+
+.project{display:flex;flex-direction:column;gap:8px;padding:4px 0 18px;text-decoration:none;color:inherit}
+.kicker{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent)}
+.project h3{font-family:var(--display);font-weight:700;font-size:34px;line-height:1.1;margin:0}
+.project p{margin:0;color:var(--muted);font-size:17px}
+.project .subtitle{font-family:var(--display);font-style:italic;font-weight:600;font-size:20px;line-height:1.2;margin-top:-4px}
+.project .updated{font-style:italic;font-size:15px}
 .project:hover h3{text-decoration:underline;text-underline-offset:4px}
-.tags{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:6px 14px;font-family:var(--sans);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
-.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px;font-family:var(--sans);font-size:15px}
-@media (max-width:560px){.facts{grid-template-columns:minmax(0,1fr)}}
-.facts div{padding:10px 0;border-bottom:1px solid var(--rule)}
-.facts b{display:block;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:700}
-footer{font-family:var(--sans);font-size:13px;color:var(--muted);border-top:1px solid var(--rule);padding-top:16px}
+.go{font-family:var(--sans);font-size:14px;font-weight:700;color:var(--accent)}
+.next{font-family:var(--sans);font-size:14px;color:var(--muted);border-top:1px solid var(--rule);padding-top:12px}
+
+.thought{display:flex;flex-direction:column;gap:8px;text-decoration:none;color:inherit;padding-bottom:16px;border-bottom:1px solid var(--rule)}
+.thought h3{font-family:var(--display);font-weight:700;font-size:22px;line-height:1.2;margin:0}
+.thought p{margin:0;font-size:16.5px;color:var(--muted)}
+.thought .meta{font-family:var(--sans);font-size:12px;color:var(--muted)}
+.thought:hover h3{text-decoration:underline;text-underline-offset:3px}
+.thought figure{margin:0 0 6px}
+.thought img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.thought figcaption{font-family:var(--sans);font-size:11.5px;color:var(--muted);padding-top:6px}
+.principles{margin:2px 0 4px;padding:0;list-style:none;counter-reset:p;font-family:var(--sans);font-size:14.5px;line-height:1.4}
+.principles li{counter-increment:p;display:flex;gap:10px;padding:8px 0;border-top:1px solid var(--rule)}
+.principles li::before{content:counter(p);font-family:var(--display);font-weight:700;font-size:18px;line-height:1;color:var(--accent);flex:0 0 14px}
+
+.contact{display:flex;flex-direction:column;align-items:center;gap:20px;border-top:3px double var(--strong);padding-top:28px;text-align:center}
+.contact h2{align-self:stretch;text-align:left}
+.contact figure{margin:0;width:100%;max-width:260px}
+.contact img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:12px}
+.contact figcaption{font-family:var(--sans);font-size:11.5px;color:var(--muted);padding-top:6px}
+.contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 32px;font-family:var(--sans);font-size:16px;font-weight:600}
+.contact-links a{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+.contact-links a:hover{text-decoration:underline;text-underline-offset:3px}
+.contact-links svg{flex:none}
+footer{font-family:var(--sans);font-size:13px;color:var(--muted);border-top:1px solid var(--rule);padding-top:16px;text-align:center}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <h1>Zong Hao Keh</h1>
-    <p class="tagline">MBA candidate, UC Berkeley Haas · Former Lead Mechanical Engineer, PETRONAS Floating LNG</p>
-    <nav class="links" aria-label="Contact">
-      <!-- Add your LinkedIn URL and email here -->
-      <a href="#projects">Projects</a>
-    </nav>
+  <header class="mast">
+    <div class="mast-name"><img class="mast-photo" src="images/headshot.jpg" alt="Zong Hao Keh" width="640" height="640"><h1>Zong Hao Keh</h1></div>
+    <div class="mast-bot">
+      <nav class="links" aria-label="Contact">
+        <a href="https://www.linkedin.com/in/zong-hao-keh">LinkedIn</a>
+        <a href="#projects">Projects</a>
+        <a href="#thoughts">Thoughts</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section aria-labelledby="about">
+  <section class="lead" aria-labelledby="about">
     <h2 id="about">About</h2>
-    <p>I spent five years as an engineer at PETRONAS, most recently as Lead Mechanical Engineer on PFLNG2, a floating LNG facility offshore Sabah, Malaysia. I'm now an MBA candidate at UC Berkeley Haas, focused on energy, the energy transition and strategy.</p>
-    <p>I trained as a mechanical engineer at Cambridge and still like building things. These days that means small software projects that help me learn faster.</p>
     <div class="facts">
       <div><b>Now</b>MBA, UC Berkeley Haas (Class of 2028)</div>
       <div><b>Before</b>Lead Mechanical Engineer, PETRONAS Floating LNG 2</div>
       <div><b>Education</b>MEng &amp; MA, Mechanical Engineering, University of Cambridge</div>
-      <div><b>Languages</b>English, Malay, Mandarin</div>
     </div>
+    <p class="deck">Five years in mechanical engineering operations on the world's first deepwater floating LNG facility, the last three leading the team. Now at Berkeley Haas as an MBA candidate, applying that experience to the business world, in energy and beyond.</p>
+    <p>I grew up in Melaka, Malaysia, the town where the country's history began. I've been fascinated by building things for as long as I can remember. As a kid, when my parents wouldn't buy me toy cars, I built my own. In high school, the frustrations of dorm life led me to design and build a portable manual washing machine.</p>
+    <p>Cliché as it sounds, one night I dreamt I was walking through an old, Harry Potter-like building in England. I woke up knowing I had to study abroad, specifically at Cambridge, where my childhood idol Isaac Newton once studied. A PETRONAS scholarship covered my studies and made a dream I once thought impossible come true.</p>
+    <p>After graduating, I took the most unusual job I could imagine: working offshore on a full-scale LNG plant in the middle of the sea, handling machinery that looked like alien technology and learning to respond to real emergencies. They were the most transformative five years of my life.</p>
+    <p>Over those years, I grew curious about business, which brought me to Berkeley Haas. I still love to build. These days that means small projects that make daily life easier and help me learn faster, and I share them here for anyone to try.</p>
+    <p>If you're a prospective student or recent graduate curious about my path, I'm always happy to help. Feel free to reach out by <a href="mailto:keh.zonghao@outlook.com">email</a> or <a href="https://www.linkedin.com/in/zong-hao-keh">LinkedIn</a>.</p>
   </section>
 
-  <section aria-labelledby="projects">
-    <h2 id="projects">Projects</h2>
-    <a class="project" href="https://brief.zonghaokeh.com">
-      <h3>Sector Brief</h3>
-      <span class="go">Visit →</span>
-      <p>A daily business briefing organized by sector and industry, with industry profiles, company context and a daily quiz. Built to sharpen my business knowledge for consulting recruiting. Updates itself every morning at 7:00 am PT.</p>
-      <div class="tags"><span>AI-generated research</span><span>Daily automation</span><span>Web app</span></div>
-    </a>
+  <div class="columns">
+    <section aria-labelledby="projects">
+      <h2 id="projects">Projects</h2>
+      <a class="project" href="https://brief.zonghaokeh.com">
+        <span class="kicker">Live</span>
+        <h3>Daily Industry Insights</h3>
+        <p>Daily global headlines, sorted by sector and industry. Each story comes with what it means for the industry and how it could shape future trends.</p>
+        <p class="updated">Updated daily at 7:00 am PT</p>
+        <span class="go">Read today's edition →</span>
+      </a>
+      <p class="next">More projects coming.</p>
+    </section>
+
+    <section aria-labelledby="thoughts">
+      <h2 id="thoughts">Thoughts</h2>
+      <a class="thought" href="https://www.linkedin.com/feed/update/urn:li:activity:7513520032778235905/">
+        <figure>
+          <img src="images/pflng-dua.jpg" alt="PFLNG Dua, a floating LNG facility, at sea at dusk" width="1200" height="895" loading="lazy">
+          <figcaption>PFLNG Dua, offshore Sabah</figcaption>
+        </figure>
+        <span class="kicker">On LinkedIn · October 2026</span>
+        <h3>High-stakes decisions, from a gas plant at sea</h3>
+        <p>What five years keeping an LNG plant running in the middle of the ocean taught me about deciding when to move fast, and when to stop.</p>
+        <ol class="principles">
+          <li>Know what is at stake, and challenge what you think you know</li>
+          <li>Communicate, communicate, communicate</li>
+          <li>Encourage dissent, and mean it</li>
+        </ol>
+        <span class="go">Read the full post →</span>
+      </a>
+    </section>
+  </div>
+
+  <section class="contact" aria-labelledby="contact">
+    <h2 id="contact">Contact</h2>
+    <div class="contact-links">
+        <a href="mailto:keh.zonghao@outlook.com"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>keh.zonghao@outlook.com</a>
+        <a href="https://www.linkedin.com/in/zong-hao-keh"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="3" fill="currentColor"/><path d="M7 10v7M7 7v.01M11 17v-7M11 13.2c0-1.8 1.1-3.2 2.8-3.2 1.6 0 2.2 1.1 2.2 2.9V17" fill="none" stroke="var(--ground)" stroke-width="2" stroke-linecap="round"/></svg>LinkedIn</a>
+    </div>
+    <figure>
+      <img src="images/dolphins.jpg" alt="A pod of dolphins swimming beneath the steel structure of an offshore facility" width="900" height="900" loading="lazy">
+      <figcaption>Dolphins passing below, offshore Sabah</figcaption>
+    </figure>
   </section>
 
   <footer>© 2026 Zong Hao Keh</footer>

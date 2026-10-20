@@ -1,6 +1,6 @@
 # zonghaokeh.com
 
-Personal site of Zong Hao Keh: about, projects and contact. A single static page, hosted on Cloudflare Pages.
+Personal site of Zong Hao Keh: about, projects, writing and contact. A single static page (`index.html` plus `images/`), hosted on Cloudflare Workers and deployed automatically on every push to `main`.
 
 Projects:
-- [Sector Brief](https://brief.zonghaokeh.com) ([source](https://github.com/zonghaokeh97/sector-brief))
+- [Daily Industry Insights](https://brief.zonghaokeh.com) ([source](https://github.com/zonghaokeh97/sector-brief))
