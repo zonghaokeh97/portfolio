@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Zong Hao Keh</title>
+<meta name="description" content="Zong Hao Keh: MBA candidate at UC Berkeley Haas, former Lead Mechanical Engineer at PETRONAS Floating LNG. Projects and contact.">
+<meta property="og:title" content="Zong Hao Keh">
+<meta property="og:description" content="MBA candidate at UC Berkeley Haas. Energy, operations and the projects I build.">
+<meta property="og:type" content="website">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Libre+Franklin:wght@400;600;700&display=swap">
+<style>
+/* Layout: one narrow column, newspaper-style type to match Sector Brief. */
+:root{
+  --ground:#FFFFFF; --ink:#121212; --muted:#5A5A5A; --rule:#DFDFDF; --strong:#121212; --soft:#F7F7F5; --accent:#326891;
+  --display:"Playfair Display", Georgia, "Times New Roman", serif;
+  --body:Georgia, "Times New Roman", Times, serif;
+  --sans:"Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root{--ground:#121212; --ink:#E8E8E6; --muted:#A3A3A0; --rule:#333333; --strong:#E8E8E6; --soft:#1C1C1C; --accent:#8DB4D6; color-scheme:dark}}
+html{height:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));padding-block:calc(env(safe-area-inset-top,0px) + 56px) calc(env(safe-area-inset-bottom,0px) + 64px);display:flex;flex-direction:column;gap:40px}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header{display:flex;flex-direction:column;gap:12px;border-bottom:3px double var(--strong);padding-bottom:24px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(44px,9vw,72px);line-height:1;letter-spacing:-.015em;margin:0}
+.tagline{font-family:var(--sans);font-size:15px;color:var(--muted);margin:0}
+.links{display:flex;flex-wrap:wrap;gap:8px 20px;font-family:var(--sans);font-size:14px;font-weight:600}
+h2{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+p{margin:0 0 14px}
+.project{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 20px;padding:18px 0;border-bottom:1px solid var(--rule);text-decoration:none;color:inherit}
+.project h3{font-family:var(--display);font-weight:700;font-size:28px;line-height:1.15;margin:0}
+.project p{grid-column:1 / -1;margin:0;color:var(--muted);font-size:17px}
+.project .go{font-family:var(--sans);font-size:14px;font-weight:700;color:var(--accent);align-self:center;white-space:nowrap}
+.project:hover h3{text-decoration:underline;text-underline-offset:4px}
+.tags{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:6px 14px;font-family:var(--sans);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px;font-family:var(--sans);font-size:15px}
+@media (max-width:560px){.facts{grid-template-columns:minmax(0,1fr)}}
+.facts div{padding:10px 0;border-bottom:1px solid var(--rule)}
+.facts b{display:block;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:700}
+footer{font-family:var(--sans);font-size:13px;color:var(--muted);border-top:1px solid var(--rule);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Zong Hao Keh</h1>
+    <p class="tagline">MBA candidate, UC Berkeley Haas · Former Lead Mechanical Engineer, PETRONAS Floating LNG</p>
+    <nav class="links" aria-label="Contact">
+      <!-- Add your LinkedIn URL and email here -->
+      <a href="#projects">Projects</a>
+    </nav>
+  </header>
+
+  <section aria-labelledby="about">
+    <h2 id="about">About</h2>
+    <p>I spent five years as an engineer at PETRONAS, most recently as Lead Mechanical Engineer on PFLNG2, a floating LNG facility offshore Sabah, Malaysia. I'm now an MBA candidate at UC Berkeley Haas, focused on energy, the energy transition and strategy.</p>
+    <p>I trained as a mechanical engineer at Cambridge and still like building things. These days that means small software projects that help me learn faster.</p>
+    <div class="facts">
+      <div><b>Now</b>MBA, UC Berkeley Haas (Class of 2028)</div>
+      <div><b>Before</b>Lead Mechanical Engineer, PETRONAS Floating LNG 2</div>
+      <div><b>Education</b>MEng &amp; MA, Mechanical Engineering, University of Cambridge</div>
+      <div><b>Languages</b>English, Malay, Mandarin</div>
+    </div>
+  </section>
+
+  <section aria-labelledby="projects">
+    <h2 id="projects">Projects</h2>
+    <a class="project" href="https://brief.zonghaokeh.com">
+      <h3>Sector Brief</h3>
+      <span class="go">Visit →</span>
+      <p>A daily business briefing organized by sector and industry, with industry profiles, company context and a daily quiz. Built to sharpen my business knowledge for consulting recruiting. Updates itself every morning at 7:00 am PT.</p>
+      <div class="tags"><span>AI-generated research</span><span>Daily automation</span><span>Web app</span></div>
+    </a>
+  </section>
+
+  <footer>© 2026 Zong Hao Keh</footer>
+</div>
+</body>
+</html>
